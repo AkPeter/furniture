@@ -18,7 +18,6 @@
 furniture.txt
 .idea/*
 config/secrets.yml
-config/database.yml
 y
 y.pub
 .rbenv-vars

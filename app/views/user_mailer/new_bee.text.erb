@@ -1,0 +1,6 @@
+Привет <%= @username %> и с подключением к нашему проекту <%= ApplicationController::Domain %>!
+
+Твой пароль для входа <%= @password %>
+Заходи: <%= @signin %>
+
+<%= render :partial => 'shared/mailer_sign' %>

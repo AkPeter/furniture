@@ -23,18 +23,39 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+# push уведомления
 gem 'thin'
-
 gem 'faye'
+gem 'private_pub'
+
+# delayed_job
+gem 'delayed_job'
+gem 'delayed_job_active_record'
+gem 'daemons'
+
+# мой гем .)
+gem 'russland_sms'
+
+# локализация
+gem 'i18n'
+gem 'russian', '~> 0.6.0'
+
+# работа с изображениями
+gem 'paperclip', '~> 4.3.0'
+
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+group :production do
+  gem 'rails_12factor'
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

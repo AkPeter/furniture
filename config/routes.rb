@@ -1,9 +1,19 @@
 Rails.application.routes.draw do
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'users#signin'
+
+  # модель пользователя
+  get 'personal_page' => 'users#personal_page', as: 'personal_page'
+  get 'session/logout' => 'session#logout', as: 'logout'
+  get 'signin' => 'users#signin', as: 'signin'
+  get 'resurrection' => 'session#resurrection', as: 'resurrection'
+  post  'users' => 'users#create'
+  patch 'users/:id' => 'users#update'
+  put   'users/:id' => 'users#update'
+  post 'password_reset' => 'users#password_reset'
+  post 'session' => 'session#signin'
+
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -53,4 +63,18 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+
+
+=begin
+    quest_items                     GET    /quest_items(.:format)            quest_items#index
+                                  POST   /quest_items(.:format)            quest_items#create
+    new_quest_item                  GET    /quest_items/signin(.:format)        quest_items#signin
+    edit_quest_item                 GET    /quest_items/:id/edit(.:format)   quest_items#edit
+    quest_item                      GET    /quest_items/:id(.:format)        quest_items#show
+    PATCH  /quest_items/:id(.:format)        quest_items#update
+    PUT    /quest_items/:id(.:format)        quest_items#update
+    DELETE /quest_items/:id(.:format)        quest_items#destroy
+=end
+
 end

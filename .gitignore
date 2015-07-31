@@ -24,3 +24,4 @@ y.pub
 .rbenv-vars
 config/private_pub.yml
 log
+config/puma.rb

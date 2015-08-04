@@ -1,2 +1,2 @@
-web: bundle exec puma -C config/puma.rb
-worker: bin/delayed_job restart
+web:            rails s -e production
+worker:         rake jobs:work

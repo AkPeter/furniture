@@ -14,7 +14,6 @@ Rails.application.routes.draw do
   post 'session' => 'session#signin'
 
 
-
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

@@ -24,3 +24,5 @@ y.pub
 config/private_pub.yml
 log
 config/puma.rb
+# Ignore application configuration
+/config/application.yml
